@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy 22nd Birthday, Nanduu! 💗</title>
+  <meta name="description" content="A magical digital birthday experience made with love for Pranathi — Nanduu. Happy 22nd Birthday!">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎂</text></svg>">
+</head>
+<body>
+
+  <!-- Progress Bar -->
+  <div class="progress-bar" id="progressBar" role="progressbar" aria-label="Page scroll progress"></div>
+
+  <!-- Confetti Canvas -->
+  <canvas id="confetti-canvas" aria-hidden="true"></canvas>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+  <!-- ═══════════════════════════════════
+       INTRO / WELCOME SURPRISE
+       ═══════════════════════════════════ -->
+  <div class="intro-overlay" id="introOverlay">
+    <!-- Gradient orbs -->
+    <div class="intro-orb intro-orb-1" aria-hidden="true"></div>
+    <div class="intro-orb intro-orb-2" aria-hidden="true"></div>
+    <div class="intro-orb intro-orb-3" aria-hidden="true"></div>
+
+    <!-- Floating hearts background -->
+    <div class="floating-hearts" id="introHearts" aria-hidden="true"></div>
+
+    <div class="intro-content">
+      <p class="intro-tagline">Someone Very Special Is Turning 22...</p>
+
+      <div class="intro-number-reveal">
+        <span class="intro-number">22</span>
+      </div>
+
+      <h1 class="intro-birthday-text">Happy 22nd Birthday</h1>
+      <p class="intro-name-highlight">
+        Nanduu! <span class="intro-sparkle">💗</span>
+      </p>
+
+      <button class="intro-btn" id="introBtn" aria-label="Open your birthday surprise">
+        <span>Open Your Birthday Surprise ✨</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════
+       MAIN CONTENT
+       ═══════════════════════════════════ -->
+  <main class="main-content" id="mainContent">
+
+    <!-- ─── HERO SECTION ─── -->
+    <section class="hero-section" id="hero">
+      <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
+      <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
+      <span class="hero-float hero-float-1" aria-hidden="true">✨</span>
+      <span class="hero-float hero-float-2" aria-hidden="true">💗</span>
+      <span class="hero-float hero-float-3" aria-hidden="true">🌸</span>
+
+      <div class="hero-grid">
+        <div class="hero-text reveal">
+          <span class="hero-tag">🎂 October 12, 2026</span>
+          <h2 class="hero-title">Happy Birthday, <span class="hl">Pranathi</span></h2>
+          <span class="hero-nickname">~ Nanduu ~</span>
+          <p class="hero-message">
+            22 looks beautiful on you, Nanduu. Here's a little world made just for you — 
+            filled with our favourite memories, a few surprises, and all the birthday love 
+            you deserve. 💗
+          </p>
+          <button class="hero-cta" onclick="document.getElementById('memories').scrollIntoView({behavior:'smooth'})" aria-label="Explore memories">
+            Explore Our Memories 📸
+          </button>
+        </div>
+        <div class="hero-image-wrapper reveal reveal-d2">
+          <div class="hero-image-frame">
+            <img src="IMG_20221013_090715_868.jpg" alt="Pranathi in a beautiful red dress" loading="eager">
+          </div>
+          <div class="hero-image-decoration" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true">✦ ✦ ✦</div>
+
+    <!-- ─── MEMORY MUSEUM ─── -->
+    <section class="memory-section" id="memories">
+      <div class="section-header reveal">
+        <span class="section-emoji">📸</span>
+        <h2 class="section-title">Our Little Memory Museum</h2>
+        <p class="section-subtitle">Every photo tells a story worth keeping</p>
+      </div>
+
+      <div class="memory-grid">
+        <!-- Photo 1: Red dress (portrait, tall) -->
+        <div class="memory-card tall portrait reveal" data-index="0">
+          <img src="IMG_20221013_090715_868.jpg" alt="Pranathi in red dress" loading="lazy">
+          <div class="memory-card-overlay">
+            <span class="memory-card-caption">A moment to remember ✨</span>
+          </div>
+        </div>
+
+        <!-- Photo 2: Bicycle (landscape, wide) -->
+        <div class="memory-card wide landscape reveal reveal-d1" data-index="1">
+          <img src="IMG_20230516_203835.jpg" alt="Pranathi with a bicycle" loading="lazy">
+          <div class="memory-card-overlay">
+            <span class="memory-card-caption">A little adventure, a lot of joy 🚲</span>
+          </div>
+        </div>
+
+        <!-- Photo 3: Group rooftop -->
+        <div class="memory-card landscape reveal reveal-d2" data-index="2">
+          <img src="IMG_20220926_203538_193.jpg" alt="Group photo on rooftop" loading="lazy">
+          <div class="memory-card-overlay">
+            <span class="memory-card-caption">The people who make life beautiful 💛</span>
+          </div>
+        </div>
+
+        <!-- Photo 4: Festive saree (portrait, tall) -->
+        <div class="memory-card tall portrait reveal reveal-d1" data-index="3">
+          <img src="IMG_20241101_134158_010.jpg" alt="Pranathi in festive saree" loading="lazy">
+          <div class="memory-card-overlay">
+            <span class="memory-card-caption">Glowing from the inside out 🪔</span>
+          </div>
+        </div>
+
+        <!-- Photo 5: Restaurant group 1 -->
+        <div class="memory-card landscape reveal reveal-d2" data-index="4">
+          <img src="IMG_20251012_152039.jpg" alt="Friends at a restaurant" loading="lazy">
+          <div class="memory-card-overlay">
+            <span class="memory-card-caption">One for the memory books 📖</span>
+          </div>
+        </div>
+
+        <!-- Photo 6: Restaurant group 2 -->
+        <div class="memory-card landscape reveal reveal-d3" data-index="5">
+          <img src="IMG_20251012_152103.jpg" alt="Friends group photo" loading="lazy">
+          <div class="memory-card-overlay">
+            <span class="memory-card-caption">Good times with great people 🤗</span>
+          </div>
+        </div>
+
+        <!-- Photo 7: Restaurant group 3 -->
+        <div class="memory-card landscape reveal reveal-d2" data-index="6">
+          <img src="IMG_20251012_152104.jpg" alt="Friends together" loading="lazy">
+          <div class="memory-card-overlay">
+            <span class="memory-card-caption">A little memory, a lot of happiness 💗</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── LIGHTBOX ── -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-label="Photo viewer" aria-modal="true">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close photo viewer">✕</button>
+      <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous photo">‹</button>
+      <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next photo">›</button>
+      <div class="lightbox-img-wrap">
+        <img id="lightboxImg" src="" alt="Photo enlarged view">
+      </div>
+      <p class="lightbox-caption" id="lightboxCaption"></p>
+    </div>
+
+    <div class="section-divider" aria-hidden="true">✦ ✦ ✦</div>
+
+    <!-- ─── BIRTHDAY QUIZ ─── -->
+    <section class="quiz-section" id="quiz">
+      <div class="section-header reveal">
+        <span class="section-emoji">🎯</span>
+        <h2 class="section-title">Birthday Vibes Check</h2>
+        <p class="section-subtitle">Let's see what kind of birthday energy you're bringing!</p>
+      </div>
+
+      <div class="quiz-container reveal">
+        <div class="quiz-card" id="quizCard">
+          <!-- Progress dots -->
+          <div class="quiz-progress" id="quizProgress"></div>
+
+          <!-- Question area -->
+          <div id="quizQuestionArea">
+            <p class="quiz-q-num" id="quizQNum"></p>
+            <h3 class="quiz-question" id="quizQuestion"></h3>
+            <div class="quiz-options" id="quizOptions"></div>
+          </div>
+
+          <!-- Response after answering -->
+          <div class="quiz-response" id="quizResponse">
+            <div class="quiz-response-emoji" id="quizResponseEmoji"></div>
+            <p class="quiz-response-text" id="quizResponseText"></p>
+            <button class="quiz-btn" id="quizNextBtn">Next Question →</button>
+          </div>
+
+          <!-- Final result -->
+          <div class="quiz-result" id="quizResult">
+            <div class="quiz-result-emoji">🎉🥳🎂</div>
+            <h3 class="quiz-result-title">You're a Birthday Queen!</h3>
+            <p class="quiz-result-subtitle">22 never looked so good ✨</p>
+            <p class="quiz-result-msg">
+              Your birthday energy is absolutely radiant. This year is going to be filled 
+              with laughter, love, adventures, and all the good things you deserve. 
+              Go ahead, unwrap your next surprise!
+            </p>
+            <button class="quiz-btn" id="quizRestartBtn">Play Again 🔄</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true">✦ ✦ ✦</div>
+
+    <!-- ─── SURPRISE GIFT ─── -->
+    <section class="gift-section" id="gift">
+      <div class="section-header reveal">
+        <span class="section-emoji">🎁</span>
+        <h2 class="section-title">Unlock Your Birthday Surprise</h2>
+        <p class="section-subtitle">Go on, you know you want to open it...</p>
+      </div>
+
+      <div class="reveal">
+        <div class="gift-box-wrapper" id="giftBoxWrapper">
+          <div class="gift-box" id="giftBox">
+            <span class="gift-bow" aria-hidden="true">🎀</span>
+            <div class="gift-box-lid"></div>
+            <div class="gift-box-body"></div>
+          </div>
+        </div>
+        <p class="gift-click-hint" id="giftHint">Tap the gift to open it!</p>
+      </div>
+
+      <div class="gift-message-container" id="giftMessage">
+        <div class="gift-message-card">
+          <div class="gift-message-emoji">🎉💗✨</div>
+          <h3 class="gift-message-title">A Little Note for Your New Chapter</h3>
+          <p class="gift-message-text">
+            Dear Nanduu,
+          </p>
+          <p class="gift-message-text">
+            22 is such a beautiful number — old enough to dream big and young enough 
+            to believe every single dream will come true. And knowing you, they will.
+          </p>
+          <p class="gift-message-text">
+            This year, I hope you find joy in the little things, courage in the tough moments, 
+            and someone who always reminds you how amazing you are (in case you ever forget).
+          </p>
+          <p class="gift-message-text">
+            You deserve the world, and I hope 22 brings you one step closer to everything 
+            you've ever wished for. Keep being your incredible self. 💗
+          </p>
+          <p class="gift-message-sig">
+            ~ With all the love and birthday sprinkles ~
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true">✦ ✦ ✦</div>
+
+    <!-- ─── BIRTHDAY WISH WALL ─── -->
+    <section class="wish-section" id="wishes">
+      <div class="section-header reveal">
+        <span class="section-emoji">💌</span>
+        <h2 class="section-title">A Birthday Wish for You</h2>
+        <p class="section-subtitle">Some words that come straight from the heart</p>
+      </div>
+
+      <div class="reveal">
+        <button class="wish-reveal-btn" id="wishRevealBtn" aria-label="Read my birthday wish">
+          Read My Birthday Wish 💌
+        </button>
+
+        <div class="wish-card" id="wishCard">
+          <p class="wish-line" data-delay="0">
+            Dear Nanduu,
+          </p>
+          <p class="wish-line" data-delay="400">
+            If I had to describe you in one word, it would be "sunshine." ☀️ 
+            Not the blinding kind — the warm, golden, makes-everything-better kind.
+          </p>
+          <p class="wish-line" data-delay="800">
+            You have this rare ability to light up a room just by walking in. 
+            Your laugh is contagious, your kindness is genuine, and your spirit is 
+            something the world needs more of.
+          </p>
+          <p class="wish-line" data-delay="1200">
+            At 22, you're stepping into a year full of possibilities. New stories to write, 
+            new places to explore, new versions of yourself to discover — and every single 
+            one of them is going to be wonderful.
+          </p>
+          <p class="wish-line" data-delay="1600">
+            I hope this year gives you belly laughs, peaceful mornings, spontaneous adventures, 
+            and moments that make your heart feel full.
+          </p>
+          <p class="wish-line accent" data-delay="2000">
+            Happy 22nd Birthday, Nanduu! May this year give you a thousand reasons to smile. 💗
+          </p>
+          <p class="wish-line sig" data-delay="2400">
+            With love, always 🌸
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── FINAL REVEAL ─── -->
+    <section class="final-section" id="finale">
+      <!-- Floating particles -->
+      <div class="final-particles" id="finalParticles" aria-hidden="true"></div>
+
+      <div class="final-content reveal">
+        <div class="final-image-frame">
+          <img src="IMG_20241101_134158_010.jpg" alt="Pranathi in a beautiful festive moment" loading="lazy">
+        </div>
+
+        <p class="final-message">
+          Some people make ordinary days feel special. Today is all about celebrating you, 
+          Nanduu. Here's to 22 — to new memories, endless laughter, and everything beautiful 
+          that's waiting for you.
+        </p>
+
+        <p class="final-closing">
+          Made with love, just for you.<br>
+          Happy Birthday, Nanduu! 💗
+        </p>
+
+        <div class="final-buttons">
+          <button class="final-btn final-btn-primary" onclick="document.getElementById('memories').scrollIntoView({behavior:'smooth'})" aria-label="Revisit memories">
+            Revisit Memories 📸
+          </button>
+          <button class="final-btn final-btn-secondary" id="replayBtn" aria-label="Replay the surprise">
+            Replay the Surprise 🔄
+          </button>
+        </div>
+
+        <p class="final-made-with">
+          crafted with <span>♥</span> because you deserve it
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
